@@ -9,13 +9,17 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <p>hi</p>
         <a
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          
+          <h1 className="text-3xl font-bold underline">
+               Working Tailwind!
+           </h1>
         </a>
       </header>
     </div>
