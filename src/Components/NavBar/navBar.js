@@ -73,7 +73,7 @@
 
 
 
-
+// Example of Functional Component 
   function NavBar(){
     return (
       <div className="navBar">
