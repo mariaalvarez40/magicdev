@@ -1,27 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+// import './App.css';
+import Footer from './components/footer/footer';
+import Navigation from './components/navigation/navigation';
+import Profile from './components/profile/profile';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p>hi</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          
-          <h1 className="text-3xl font-bold underline">
-               Working Tailwind!
-           </h1>
-        </a>
-      </header>
+      <Navigation />
+      <Profile test="fuck"/>
+      <Footer year="2023" copyright="All Rights Reserved"/>
     </div>
   );
 }
