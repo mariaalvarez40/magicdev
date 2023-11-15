@@ -1,15 +1,36 @@
 import { Component } from "react";
 
 class Profile extends Component{
-    constructor(props){
-        super(props);
+    constructor(){
+        super();
+        this.state = {
+            counter: 0,
+        };
+        
     }
+    increment(){
+        this.setState({
+            counter: this.state.counter + 1,
+        })
+    }
+    decrement(){
+        this.setState({
+            counter: this.state.counter - 1,
+        })
+    }
+    
 
     render(){
-        console.log(this.props);
-        return (   
-            <h1>{this.props.name} </h1>
-        );
+        
+        const {test} = this.props
+        return (<div>
+             <h1>Count value: {this.state.counter} </h1>
+             <button onClick={()=> this.increment()}>increment{test}</button>
+             <button onClick={()=> this.decrement()}>decrement</button>
+        </div>);
+           
+           
+       
     }
 }
   

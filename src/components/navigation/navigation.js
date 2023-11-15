@@ -1,4 +1,7 @@
 import { Component } from "react";
+import "../navigation/navigation.scss";
+
+
 
 class Navigation extends Component {
 
@@ -16,12 +19,12 @@ class Navigation extends Component {
     //   <div>{this.state.property}</div>
      
     // </div>
-    <nav>
+    <nav className="navigation">
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/services">Services</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <li><a href="/">home</a></li>
+        <li><a href="/about">about</a></li>
+        <li><a href="/services">expertise</a></li>
+        <li><a href="/contact">contact</a></li>
       </ul>
   </nav>
 
