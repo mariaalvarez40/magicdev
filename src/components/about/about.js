@@ -1,13 +1,12 @@
-import { Component } from "react";
 import "../about/about.scss";
+import React from 'react';
 
-class About extends Component{
-    render(){
-        return (
-        <div className="aboutSection" id="section1">
-            <h1>ABOUT SECTION </h1>
-        </div>);
-    }
+function About() {
+  return (
+    <div className="aboutSection" id="section1">
+      <h1>ABOUT SECTION</h1>
+    </div>
+  );
 }
-  
+
 export default About;

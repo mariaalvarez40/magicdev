@@ -7,16 +7,15 @@ import Profile from './components/profile/profile';
 
 
 function App() {
-
-
   return (
     <div className="App">
-      <Navigation/>
+      <Navigation />
       <About />
       <Experience />
       <Contact />
-      <Profile test="fuck"/>
+      <Profile/>
       <Footer year="2023" copyright="All Rights Reserved"/>
+    
     </div>
   );
 }

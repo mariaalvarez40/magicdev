@@ -1,38 +1,39 @@
-import { Component } from "react";
+import {useState } from "react";
 import "../navigation/navigation.scss";
-class Navigation extends Component {
-  constructor(props) {
-    super(props);
 
-    this.scrollToSection = this.scrollToSection.bind(this);
-  }
+function Navigation() {
+  const [isScrolling, setIsScrolling] = useState(false);
 
-  scrollToSection(sectionId) {
-    const section = document.querySelector(sectionId);
-    if (section) {
-      window.scrollTo({
-        behavior: 'instant',
-        top: section.offsetTop,
-      });
-      this.setState({ activeLink: sectionId });
+  const scrollToSection = (id) => {
+    if (!isScrolling) {
+      setIsScrolling(true);
+      const e = window.document.getElementById(id);
+      if (e) {
+        e.scrollIntoView({ behavior: 'smooth' });
+      }
+      setTimeout(() => {
+        setIsScrolling(false);
+      }, 500); // You can adjust the delay here
     }
-  }
- 
+  };
 
-  render(){
-    // const { sectionRefs } = this.props;
-    return (
-    <nav className="navigation">
+  return (
+    <div className="sticky-navigation"> 
+       <nav className="navigation"> 
       <ul>
-        <li>Logo</li>
-        <li><button onClick={() => this.scrollToSection('#section1')}>about</button></li>
-        <li><button onClick={() => this.scrollToSection('#section2')}>experience</button></li>
-        <li><button onClick={() => this.scrollToSection('#section3')}>contact</button></li>
+        <li>
+          <button onClick={() => scrollToSection('section1')}>Section 1</button>
+        </li>
+        <li>
+          <button onClick={() => scrollToSection('section2')}>Section 2</button>
+        </li>
+        <li>
+          <button onClick={() => scrollToSection('section3')}>Section 3</button>
+        </li>
       </ul>
-  </nav>
-
-    );
-  }
-
+    </nav>
+    </div>
+   
+  );
 }
-export default Navigation; 
+export default Navigation;
