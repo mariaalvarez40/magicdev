@@ -3,6 +3,9 @@ body {
   padding: 0;
   font-family: 'Roboto', sans-serif !important;
 }
+html {
+	scroll-behavior: smooth;
+}
 //Colors
 $black: #000000;
 $white: #FFFFFF; 
@@ -10,9 +13,5 @@ $beige: #FFF3EF;
 $red: #FF0204;
 $pink: #FF86C8;
 
-
-.App {
-  background-color: $white;
-}
 
 

@@ -1,27 +1,35 @@
-import {useState } from "react";
+// import {useState } from "react";
 import "../navigation/navigation.scss";
 
 function Navigation() {
-  const [isScrolling, setIsScrolling] = useState(false);
 
-  const scrollToSection = (id) => {
-    if (!isScrolling) {
-      setIsScrolling(true);
-      const e = window.document.getElementById(id);
-      if (e) {
-        e.scrollIntoView({ behavior: 'smooth' });
-      }
-      setTimeout(() => {
-        setIsScrolling(false);
-      }, 500); // You can adjust the delay here
-    }
+  const goToTop = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    const offset = 100; // Height of the sticky navigation bar, adjust as needed
+    const bodyRect = document.body.getBoundingClientRect().top;
+    const sectionRect = section.getBoundingClientRect().top;
+    const sectionPosition = sectionRect - bodyRect;
+    const offsetPosition = sectionPosition - offset;
+  
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
   };
 
   return (
     <div className="sticky-navigation"> 
     <div className="wrapper">
     <div className="logo-container"> 
-      <div className="logo" onClick={() => scrollToSection('section0')}></div>
+      <div className="logo" onClick={() => goToTop()}></div>
     </div>
 
     <nav className="navigation"> 

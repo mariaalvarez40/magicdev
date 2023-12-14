@@ -1,16 +1,18 @@
 @import '../../../src/styles.scss';
 
-.aboutSection{
-    height: 100%;
-    padding: 8rem;
+.aboutSection {
+    height: 300px;
+    width: 100%;
     background-color: $black;
+    color: white;
+    outline: 5px white solid;
 
-// .container{
-
-//     height: 500px;
-//     width: 100%;
-//     outline: 1px white solid;
-//     display: flex;
-// }
+.about-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+p {
+    margin: unset; 
+}
 }
 
