@@ -1,13 +1,18 @@
-// import './App.css';
+import About from './components/about/about';
+import Banner from './components/banner/banner';
+import Contact from './components/contact/contact';
+import Experience from './components/experience/experience';
 import Footer from './components/footer/footer';
 import Navigation from './components/navigation/navigation';
-import Profile from './components/profile/profile';
 
 function App() {
   return (
     <div className="App">
       <Navigation />
-      <Profile test="fuck"/>
+      <Banner />
+      <About />
+      <Experience />
+      <Contact />
       <Footer year="2023" copyright="All Rights Reserved"/>
     </div>
   );

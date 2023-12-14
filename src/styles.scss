@@ -1,17 +1,18 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Roboto', sans-serif !important;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-  monospace;
-}
-
-.App {
-  background-color: beige;
-}
-
 //Colors
 $black: #000000;
 $white: #FFFFFF; 
+$beige: #FFF3EF;
+$red: #FF0204;
+$pink: #FF86C8;
+
+
+.App {
+  background-color: $white;
+}
+
+

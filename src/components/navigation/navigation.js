@@ -1,48 +1,45 @@
-import { Component } from "react";
+import {useState } from "react";
 import "../navigation/navigation.scss";
 
+function Navigation() {
+  const [isScrolling, setIsScrolling] = useState(false);
 
+  const scrollToSection = (id) => {
+    if (!isScrolling) {
+      setIsScrolling(true);
+      const e = window.document.getElementById(id);
+      if (e) {
+        e.scrollIntoView({ behavior: 'smooth' });
+      }
+      setTimeout(() => {
+        setIsScrolling(false);
+      }, 500); // You can adjust the delay here
+    }
+  };
 
-class Navigation extends Component {
+  return (
+    <div className="sticky-navigation"> 
+    <div className="wrapper">
+    <div className="logo-container"> 
+      <div className="logo" onClick={() => scrollToSection('section0')}></div>
+    </div>
 
-  // constructor(props){
-  //   super(props);
-  //   this.state = {property: 'load'};
-  //   this.handleClick = this.handleClick.bind(this);
-  // }
-
-  
-  render(){
-    return (
-    //   <div>
-    //   <button onClick={this.handleClick}>Click me!</button>
-    //   <div>{this.state.property}</div>
-     
-    // </div>
-    <nav className="navigation">
-      <ul>
-        <li><a href="/">home</a></li>
-        <li><a href="/about">about</a></li>
-        <li><a href="/services">expertise</a></li>
-        <li><a href="/contact">contact</a></li>
-      </ul>
-  </nav>
-
-    );
-  }
-//   handleClick() {
-//     this.setState({property: 'clicked'});
-//  }
+    <nav className="navigation"> 
+          <ul>
+            <li>
+              <button onClick={() => scrollToSection('section1')}>about</button>
+            </li>
+            <li>
+              <button onClick={() => scrollToSection('section2')}>experience</button>
+            </li>
+            <li>
+              <button onClick={() => scrollToSection('section3')}>contact</button>
+            </li>
+          </ul>
+    </nav>
+    </div>
+    </div>
+   
+  );
 }
-export default Navigation; 
-
-
-// Example of Functional Component 
-  // function NavBar(){
-  //   return (
-  //     <div className="navBar">
-  //       <p className="text-3xl font-bold underline"> Top</p>
-  //     </div>
-  //   );
-  // }
-  // export default NavBar; 
+export default Navigation;
