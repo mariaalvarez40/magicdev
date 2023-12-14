@@ -19,19 +19,25 @@ function Navigation() {
 
   return (
     <div className="sticky-navigation"> 
-       <nav className="navigation"> 
-      <ul>
-        <li>
-          <button onClick={() => scrollToSection('section1')}>Section 1</button>
-        </li>
-        <li>
-          <button onClick={() => scrollToSection('section2')}>Section 2</button>
-        </li>
-        <li>
-          <button onClick={() => scrollToSection('section3')}>Section 3</button>
-        </li>
-      </ul>
+    <div className="wrapper">
+    <div className="logo-container"> 
+      <div className="logo" onClick={() => scrollToSection('section0')}></div>
+    </div>
+
+    <nav className="navigation"> 
+          <ul>
+            <li>
+              <button onClick={() => scrollToSection('section1')}>about</button>
+            </li>
+            <li>
+              <button onClick={() => scrollToSection('section2')}>experience</button>
+            </li>
+            <li>
+              <button onClick={() => scrollToSection('section3')}>contact</button>
+            </li>
+          </ul>
     </nav>
+    </div>
     </div>
    
   );
