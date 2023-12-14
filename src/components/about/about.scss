@@ -1,18 +1,48 @@
 @import '../../../src/styles.scss';
 
-.aboutSection {
-    height: 300px;
+.about-section {
+    height: 100%;
     width: 100%;
-    background-color: $black;
-    color: white;
-    outline: 5px white solid;
 
 .about-wrapper{
+    padding: 1rem;
+    background-color: $black;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    @include sm-breakpoint {
+       flex-direction: row;
+    }
 }
-p {
-    margin: unset; 
+.about-content {
+    color: $white;
+    text-align: left;
+    padding: 2rem;
+    width: 100%;
+
+    h1 {
+        font-style: italic;
+        font-weight: bold;
+        font-size: 50px;
+        @include sm-breakpoint {
+            font-size: 50px;
+            font-size: 65px;
+         }
+    }
+    p {
+        font-size: 16px;   
+
+    }
 }
+.about-image{
+    background-image: url(../../assets/pixar-face.png);
+    min-height: 350px;
+    min-width: 350px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
 }
 
+}
