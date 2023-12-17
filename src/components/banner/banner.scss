@@ -7,7 +7,7 @@
 .banner-wrapper{
     display: flex;
     flex-direction: column;
-    height: 550px;
+    height: 700px;
     @include sm-breakpoint {
        flex-direction: row;
     }
