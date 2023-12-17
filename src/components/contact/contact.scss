@@ -1,6 +1,78 @@
 @import '../../../src/styles.scss';
 
-.contactSection{
+.contact-section {
+    height: 100%;
+    width: 100%;
+
+.contact-wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    @include sm-breakpoint {
+       flex-direction: row;
+    }
+}
+.contact-content {
     background-color: $pink;
-    height: 1020px;
+    flex: 1;
+    color: $white;
+    text-align: left;
+    padding: 2rem 3rem;
+
+    @include sm-breakpoint {
+        text-align: right;
+     }
+
+    h1 {
+        font-style: italic;
+        font-weight: bold;
+        font-size: 50px;
+        @include sm-breakpoint {
+            font-size: 65px;
+         }
+    }
+    p {
+        font-size: 18px;
+        border: 2px $white solid;
+        padding: 1rem;
+        border-radius: 50%;
+
+    }
+}
+.contact-image{
+    flex: 1;
+    background-image: url(../../assets/splash-2.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.contact-socials{
+    display: flex;
+    justify-content: flex-start;
+
+    @include sm-breakpoint {
+        justify-content: flex-end;
+     }
+}
+.gmail{
+    height: 45px;
+    width: 45px;
+    background-image: url(../../assets/envelope-solid.svg);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+.linkedIn {
+    height: 45px;
+    width: 45px;
+    background-image: url(../../assets/linkedin-in.svg);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+
 }
