@@ -16,15 +16,18 @@
     background-color: $pink;
     flex: 1;
     color: $white;
-    text-align: right;
+    text-align: left;
     padding: 2rem 3rem;
+
+    @include sm-breakpoint {
+        text-align: right;
+     }
 
     h1 {
         font-style: italic;
         font-weight: bold;
         font-size: 50px;
         @include sm-breakpoint {
-            font-size: 50px;
             font-size: 65px;
          }
     }
@@ -43,5 +46,33 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+.contact-socials{
+    display: flex;
+    justify-content: flex-start;
+
+    @include sm-breakpoint {
+        justify-content: flex-end;
+     }
+}
+.gmail{
+    height: 45px;
+    width: 45px;
+    background-image: url(../../assets/envelope-solid.svg);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+.linkedIn {
+    height: 45px;
+    width: 45px;
+    background-image: url(../../assets/linkedin-in.svg);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
 
 }
