@@ -10,6 +10,7 @@
     height: 700px;
     @include sm-breakpoint {
        flex-direction: row;
+       height: 550px;
     }
 }
 .contact-content {
@@ -24,7 +25,6 @@
      }
 
     h1 {
-        font-style: italic;
         font-weight: bold;
         font-size: 50px;
         @include sm-breakpoint {

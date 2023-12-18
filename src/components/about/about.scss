@@ -1,15 +1,12 @@
 @import '../../../src/styles.scss';
 
 .about-section {
-    height: 100%;
-    width: 100%;
+    background-color: $black;
+    padding: 3rem;
 
 .about-wrapper{
-    padding: 1rem;
-    background-color: $black;
     display: flex;
     flex-direction: column;
-    height: 100%;
     align-items: center;
     @include sm-breakpoint {
        flex-direction: row;
@@ -18,27 +15,30 @@
 .about-content {
     color: $white;
     text-align: left;
-    padding: 2rem;
     width: 100%;
-
     h1 {
-        font-style: italic;
         font-weight: bold;
         font-size: 50px;
         @include sm-breakpoint {
-            font-size: 50px;
             font-size: 65px;
          }
     }
     p {
-        font-size: 16px;   
-
+        font-size: 16px; 
     }
+}
+.image-container{
+    height: 300px;
+    width: 300px;
+    @include sm-breakpoint {
+        // height: 400px;
+        width: 400px;
+     }
 }
 .about-image{
     background-image: url(../../assets/pixar-face.png);
-    min-height: 350px;
-    min-width: 350px;
+    height: 100%;
+    width: 100%;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
