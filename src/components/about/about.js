@@ -13,7 +13,9 @@ function About() {
           Whether I'm laying out a project roadmap or coding a complex web application, my goal is to deliver excellence and drive technological advancement.
           </p>
         </div>
+        <div className="image-container">
         <div className="about-image"></div>
+        </div>    
       </div>   
     </div>
   );
